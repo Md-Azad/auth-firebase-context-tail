@@ -17,9 +17,17 @@ const Header = () => {
         <Link className="btn btn-ghost normal-case text-xl" to="/">
           Home
         </Link>
-        <Link className="btn btn-ghost normal-case text-xl" to="/Register">
+        <Link className="btn btn-ghost normal-case text-xl" to="/register">
           Sign up
         </Link>
+        <Link className="btn btn-ghost normal-case text-xl" to="/orders">
+          Orders
+        </Link>
+        {user && (
+          <Link className="btn btn-ghost normal-case text-xl" to="/profile">
+            Profile
+          </Link>
+        )}
         <Link className="btn btn-ghost normal-case text-xl" to="/login">
           Login
         </Link>
@@ -31,9 +39,10 @@ const Header = () => {
             </button>
           </>
         ) : (
-          <Link to="/login" className="btn btn-xs">
-            Login
-          </Link>
+          // <Link to="/login" className="btn btn-xs">
+          //   Login
+          // </Link>
+          ""
         )}
       </div>
     </div>

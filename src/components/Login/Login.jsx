@@ -13,7 +13,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const signedUser = result.user;
-        console.log(signedUser);
+        form.reset();
       })
       .then((error) => {
         console.log(error);
